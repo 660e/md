@@ -1,12 +1,9 @@
-### 660e
-```js
+// 660e
 function test() {
   return '明'.charCodeAt().toString(16);
 }
-```
 
-### 页面隐藏/展示时执行（最小化时无效）
-```js
+// 页面隐藏/展示时执行（最小化时无效）
 function visibilityChange(func_hidden, func_visible) {
   let hidden;
   let vc;
@@ -24,10 +21,8 @@ function visibilityChange(func_hidden, func_visible) {
     document[hidden] ? func_hidden() : func_visible();
   }, false);
 }
-```
 
-### 获取url参数
-```js
+// 获取url参数
 function getUrlParams(url = '') {
   const params = url.split('?')[1];
   const paramsQuery = {};
@@ -38,10 +33,8 @@ function getUrlParams(url = '') {
   }
   return paramsQuery;
 }
-```
 
-### 获取cookie
-```js
+// 获取cookie
 function getCookie(name) {
   const cookies = document.cookie ? document.cookie.split('; ') : [];
   let cookiesQuery;
@@ -51,20 +44,15 @@ function getCookie(name) {
   });
   return cookiesQuery;
 }
-```
 
-### 设置cookie
-```js
+// 设置cookie
 function setCookie(name, value, expires) {
   let date = new Date();
   date.setDate(date.getDate() + expires);
   document.cookie = `${name}=${value};expires=${date}`;
 }
-```
 
-### 删除cookie
-```js
+// 删除cookie
 function removeCookie(name) {
   setCookie(name, '0', -1);
 }
-```
