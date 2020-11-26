@@ -1,7 +1,14 @@
+### 660e
+
+```javascript
 function test() {
   return '明'.charCodeAt().toString(16);
 }
+```
 
+### 页面隐藏/展示时执行（最小化时无效）
+
+```javascript
 /**
  * 页面隐藏/展示时执行（最小化时无效）
  *
@@ -26,7 +33,11 @@ function visibilityChange(func_hidden, func_visible) {
     document[hidden] ? func_hidden() : func_visible();
   }, false);
 }
+```
 
+### 获取url参数
+
+```javascript
 /**
  * 获取url参数
  *
@@ -44,7 +55,11 @@ function getUrlParams(url = '') {
   }
   return paramsQuery;
 }
+```
 
+### 获取cookie
+
+```javascript
 /**
  * 获取cookie
  *
@@ -61,7 +76,11 @@ function getCookie(name) {
   });
   return cookiesQuery;
 }
+```
 
+### 设置cookie
+
+```javascript
 /**
  * 设置cookie
  *
@@ -75,7 +94,11 @@ function setCookie(name, value, expires) {
   date.setDate(date.getDate() + expires);
   document.cookie = `${name}=${value};expires=${date}`;
 }
+```
 
+### 删除cookie
+
+```javascript
 /**
  * 删除cookie
  *
@@ -85,7 +108,11 @@ function setCookie(name, value, expires) {
 function removeCookie(name) {
   setCookie(name, '0', -1);
 }
+```
 
+### 休眠
+
+```javascript
 /**
  * 休眠
  *
@@ -95,3 +122,5 @@ function removeCookie(name) {
 async function sleep(interval) {
   return new Promise(resolve => window.setTimeout(resolve, interval));
 }
+```
+
