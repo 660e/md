@@ -52,11 +52,11 @@ console.log(5);
 4
 ```
 
-**第一轮宏任务：**打印1；打印2；将setTimeout回调放入下一轮宏任务；将resolve(5)的then放入第一轮微任务；将resolve(6)的then放入第一轮微任务；打印7
+第一轮宏任务：打印1；打印2；将setTimeout回调放入下一轮宏任务；将resolve(5)的then放入第一轮微任务；将resolve(6)的then放入第一轮微任务；打印7
 
-**第一轮微任务：**打印5；打印6
+第一轮微任务：打印5；打印6
 
-**第二轮宏任务：**打印3；resolve(5)已执行，resolve(4)无效
+第二轮宏任务：打印3；resolve(5)已执行，resolve(4)无效
 
 ```javascript
 const fn = () => (new Promise(resolve => {
