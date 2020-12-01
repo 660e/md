@@ -119,3 +119,11 @@ git checkout -b dev
 git checkout readme.txt
 ```
 
+### git remote
+
+清理过时的远端分支
+
+```shell
+git remote prune origin
+```
+
