@@ -124,3 +124,54 @@ async function sleep(interval) {
 }
 ```
 
+### 类型判断
+
+```javascript
+/**
+ * 类型判断
+ *
+ * @param  {any}     source
+ * @return {boolean}
+ *
+ */
+function isFunction(source) {
+  return toString.call(source) === '[object Function]';
+}
+
+function isObject(source) {
+  return toString.call(source) === '[object Object]';
+}
+
+function isArray(source) {
+  return toString.call(source) === '[object Array]';
+}
+
+function isString(source) {
+  return toString.call(source) === '[object String]';
+}
+
+function isNumber(source) {
+  return toString.call(source) === '[object Number]';
+}
+
+function isUndefined(source) {
+  return toString.call(source) === '[object Undefined]';
+}
+
+function isNull(source) {
+  return toString.call(source) === '[object Null]';
+}
+
+function isDate(source) {
+  return toString.call(source) === '[object Date]';
+}
+
+function isMath(source) {
+  return toString.call(source) === '[object Math]';
+}
+
+function isWindow(source) {
+  return toString.call(source) === '[object Window]';
+}
+```
+
