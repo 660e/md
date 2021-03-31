@@ -37,25 +37,28 @@ const fn = (i, resolve) => {
 };
 new Promise(resolve => {
   fn(1, resolve);
-}).then(response => {
-  return new Promise(resolve => {
+})
+  .then(response => {
+    return new Promise(resolve => {
+      arr.push(response);
+      fn(2, resolve);
+    });
+  })
+  .then(response => {
+    return new Promise(resolve => {
+      arr.push(response);
+      fn(3, resolve);
+    });
+  })
+  .then(response => {
     arr.push(response);
-    fn(2, resolve);
+    console.log(arr); // > [1, 2, 3]
   });
-}).then(response => {
-  return new Promise(resolve => {
-    arr.push(response);
-    fn(3, resolve);
-  });
-}).then(response => {
-  arr.push(response);
-  console.log(arr); // > [1, 2, 3]
-});
 ```
 
 ### [async](https://developer.mozilla.org/zh-CN/docs/web/javascript/reference/statements/async_function)
 
-用于定义一个返回AsyncFunction对象（隐式的Promise）的异步函数，await会使async暂停，等待Promise的结果，await仅在async中有效
+用于定义一个返回 AsyncFunction 对象（隐式的 Promise）的异步函数，await 会使 async 暂停，等待 Promise 的结果，await 仅在 async 中有效
 
 ```javascript
 const fn1 = () => {
@@ -99,4 +102,3 @@ console.log(g.next().value);
 3
 undefined
 ```
-

@@ -1,6 +1,6 @@
 ### 事件循环（event loop）
 
-click、setTimeout等宏任务（task）会进入循环，Promise、MutationObserver等微任务（microtask）会进入另一个循环
+click、setTimeout 等宏任务（task）会进入循环，Promise、MutationObserver 等微任务（microtask）会进入另一个循环
 
 ```javascript
 console.log(1);
@@ -28,7 +28,7 @@ console.log(6);
 2
 ```
 
-Promise.resolve直接返回resolved状态，并在本轮事件循环结束时执行then
+Promise.resolve 直接返回 resolved 状态，并在本轮事件循环结束时执行 then
 
 ```javascript
 console.log(1);
@@ -52,28 +52,29 @@ console.log(5);
 4
 ```
 
-第一轮宏任务：打印1；打印2；将setTimeout回调放入下一轮宏任务；将resolve(5)的then放入第一轮微任务；将resolve(6)的then放入第一轮微任务；打印7
+第一轮宏任务：打印 1；打印 2；将 setTimeout 回调放入下一轮宏任务；将 resolve(5)的 then 放入第一轮微任务；将 resolve(6)的 then 放入第一轮微任务；打印 7
 
-第一轮微任务：打印5；打印6
+第一轮微任务：打印 5；打印 6
 
-第二轮宏任务：打印3；resolve(5)已执行，resolve(4)无效
+第二轮宏任务：打印 3；resolve(5)已执行，resolve(4)无效
 
 ```javascript
-const fn = () => (new Promise(resolve => {
-  console.log(1);
-  const p = new Promise(resolve => {
-    console.log(2);
-    window.setTimeout(() => {
-      console.log(3);
-      resolve(4);
-    }, 0);
-    resolve(5);
+const fn = () =>
+  new Promise(resolve => {
+    console.log(1);
+    const p = new Promise(resolve => {
+      console.log(2);
+      window.setTimeout(() => {
+        console.log(3);
+        resolve(4);
+      }, 0);
+      resolve(5);
+    });
+    resolve(6);
+    p.then(a => {
+      console.log(a);
+    });
   });
-  resolve(6);
-  p.then(a => {
-    console.log(a);
-  });
-}));
 fn().then(b => {
   console.log(b);
 });
@@ -89,7 +90,7 @@ console.log(7);
 3
 ```
 
-await等待的结果如果不是Promise，则先执行async外的同步代码，再回到async内顺序执行
+await 等待的结果如果不是 Promise，则先执行 async 外的同步代码，再回到 async 内顺序执行
 
 ```javascript
 async function fn1() {
@@ -125,7 +126,7 @@ console.log(8);
 5
 ```
 
-await等待的结果如果是Promise，则先执行async外的同步代码，然后等待所有Promise执行完毕，再回到async内顺序执行
+await 等待的结果如果是 Promise，则先执行 async 外的同步代码，然后等待所有 Promise 执行完毕，再回到 async 内顺序执行
 
 ```javascript
 async function fn1() {
@@ -145,4 +146,3 @@ new Promise(resolve => {
 2
 7
 ```
-

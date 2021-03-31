@@ -39,7 +39,11 @@ console.log(sum); // > 10
 设置第一次调用的第一个参数的值
 
 ```javascript
-const arr = [{ a: 1, b: 2 }, { a: 3, b: 4 }, { a: 5, b: 6 }];
+const arr = [
+  { a: 1, b: 2 },
+  { a: 3, b: 4 },
+  { a: 5, b: 6 }
+];
 const sum = arr.reduce((accumulator, element) => {
   return accumulator + element.a * element.b; // 第一次：0 + 1 * 2
 }, 0);
@@ -59,7 +63,7 @@ console.log(arr.indexOf(3, 3)); // > -1
 
 ### .includes(element, fromIndex)
 
-在数组中查找指定元素，根据情况，返回true或false
+在数组中查找指定元素，根据情况，返回 true 或 false
 
 ```javascript
 const arr = [1, 2, 3, 4];
@@ -82,7 +86,7 @@ console.log(a); // > 3
 
 ### .some((element, index, array) => {}, thisArg)
 
-用提供的函数处理数组中的所有元素，如果有元素满足条件，则返回true，并立即终止处理
+用提供的函数处理数组中的所有元素，如果有元素满足条件，则返回 true，并立即终止处理
 
 ```javascript
 const arr = [1, 2, 3, 4];
@@ -102,7 +106,7 @@ true
 
 ### .every((element, index, array) => {}, thisArg)
 
-用提供的函数处理数组中的所有元素，如果有元素不满足条件，则返回false，并立即终止处理
+用提供的函数处理数组中的所有元素，如果有元素不满足条件，则返回 false，并立即终止处理
 
 ```javascript
 const arr = [1, 2, 3, 4];
@@ -199,4 +203,3 @@ const arr = [1, 2, 3, 4];
 arr.push(5);
 console.log(arr); // > [1, 2, 3, 4, 5]
 ```
-

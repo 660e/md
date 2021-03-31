@@ -1,6 +1,6 @@
 ### npm init
 
-创建并初始化package.json
+创建并初始化 package.json
 
 ```shell
 npm init
@@ -8,21 +8,21 @@ npm init
 
 ### npm install
 
-安装package.json中配置的依赖包
+安装 package.json 中配置的依赖包
 
 ```shell
 npm install
 npm i
 ```
 
-安装指定依赖包，并写入devDependencies字段
+安装指定依赖包，并写入 devDependencies 字段
 
 ```shell
 npm install webpack --save-dev
 npm i webpack -D
 ```
 
-安装指定依赖包，并写入dependencies字段
+安装指定依赖包，并写入 dependencies 字段
 
 ```shell
 npm install jquery --save
@@ -83,4 +83,4 @@ npm audit fix
 
 ### 参考资料
 
-* [https://docs.npmjs.com/cli/v6/commands](https://docs.npmjs.com/cli/v6/commands)
+- [https://docs.npmjs.com/cli/v6/commands](https://docs.npmjs.com/cli/v6/commands)

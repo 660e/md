@@ -1,6 +1,6 @@
 ### cookie
 
-每次请求时，cookie都会发送到服务器
+每次请求时，cookie 都会发送到服务器
 
 ```javascript
 document.cookie = 'name=value';
@@ -19,7 +19,7 @@ sessionStorage.clear();
 
 ### localStorage
 
-数据存储在localStorage是无期限的
+数据存储在 localStorage 是无期限的
 
 ```javascript
 localStorage.setItem('key', 'value');
@@ -73,4 +73,3 @@ ETag：资源的特定版本的标识符
 ```
 ETag: "589db247-17ba0"
 ```
-

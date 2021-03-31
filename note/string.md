@@ -44,4 +44,3 @@ console.log(str.substring(3)); // > 'em ipsum'
 console.log(str.substring(3, 8)); // > 'em ip'
 console.log(str.substring(9, 7)); // > 'ps'
 ```
-

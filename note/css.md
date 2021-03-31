@@ -1,11 +1,31 @@
 ### 样式重置
 
 ```css
-body, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, th, td, p, button, input, select, textarea {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dd,
+th,
+td,
+p,
+button,
+input,
+select,
+textarea {
   margin: 0;
   padding: 0;
 }
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
 }
@@ -30,7 +50,7 @@ table {
 
 ### 重排（reflow）
 
-触发重排，从layout开始重新渲染
+触发重排，从 layout 开始重新渲染
 
 ```javascript
 node.appendChild(child); // 添加、删除可见元素
@@ -38,13 +58,13 @@ node.innerText(text); // 改变文本内容
 element.style.right = '1px'; // 改变元素位置：top、left、right、bottom...
 element.style.width = '1px'; // 改变元素尺寸：border、padding、margin、width、height...
 element.offsetTop; // 返回元素偏移量：offsetTop、scrollTop、clientTop...
-element.onresize = function() {}; // 改变窗口大小
+element.onresize = function () {}; // 改变窗口大小
 window.getComputedStyle(element); // 计算样式
 ```
 
 ### 重绘（repaint）
 
-触发重绘，从paint开始重新渲染
+触发重绘，从 paint 开始重新渲染
 
 ```css
 .demo {
@@ -95,14 +115,13 @@ GFC（grid formatting context）
 
 ### 输入网址 -> 页面呈现
 
-* url -> dns -> ip -> server
-* http
-* html -> byte -> character -> token -> node -> dom tree
-* css -> render tree
-* layout -> paint -> composite
-* display
+- url -> dns -> ip -> server
+- http
+- html -> byte -> character -> token -> node -> dom tree
+- css -> render tree
+- layout -> paint -> composite
+- display
 
 ### 参考资料
 
-* [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
-
+- [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)

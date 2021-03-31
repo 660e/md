@@ -1,4 +1,4 @@
-### js注释规范
+### js 注释规范
 
 ```javascript
 /**
@@ -23,14 +23,14 @@ function function_name(argument) {
 }
 ```
 
-### commit规范
+### commit 规范
 
-* feat/feature：增加新功能
-* fix：修复bug
-* docs：编写文档、编写注释
-* style：变更代码格式（不影响代码运行逻辑）
-* refactor：重构
-* chore：变更构建过程或构建工具
+- feat/feature：增加新功能
+- fix：修复 bug
+- docs：编写文档、编写注释
+- style：变更代码格式（不影响代码运行逻辑）
+- refactor：重构
+- chore：变更构建过程或构建工具
 
 ### 闭包（closure）
 
@@ -69,7 +69,7 @@ console.log(Fn.prototype.constructor === obj.__proto__.constructor); // > true
 
 ### this
 
-this引用的是函数上下文，它的指向取决于函数在哪调用，而不是在哪定义
+this 引用的是函数上下文，它的指向取决于函数在哪调用，而不是在哪定义
 
 ```javascript
 var a = 1;
@@ -77,7 +77,7 @@ const obj = {
   a: 2,
   b: {
     a: 3,
-    fn1: function() {
+    fn1: function () {
       return this.a;
     },
     fn2: () => {
@@ -104,7 +104,7 @@ console.log(a === b); // > false
 console.log(a + 1 === b + 1); // > true
 ```
 
-Fn的return如果是object，则new Fn()指向当前对象
+Fn 的 return 如果是 object，则 new Fn()指向当前对象
 
 ```javascript
 function Fn() {
@@ -116,7 +116,7 @@ const obj = new Fn();
 console.log(obj.a); // > 2
 ```
 
-Fn的return如果是string、number、boolean、undefined、null，则new Fn()指向Fn
+Fn 的 return 如果是 string、number、boolean、undefined、null，则 new Fn()指向 Fn
 
 ```javascript
 function Fn() {
@@ -142,34 +142,33 @@ function fn(a, b, c) {
 fn(1, 2, 3);
 ```
 
-### js编译过程
+### js 编译过程
 
-* 分词（tokenizing）
-* 解析（parsing） -> 抽象语法树（abstract syntax tree）
-* 生成原始代码（raw code）
+- 分词（tokenizing）
+- 解析（parsing） -> 抽象语法树（abstract syntax tree）
+- 生成原始代码（raw code）
 
-### 优化js
+### 优化 js
 
-* 始终以相同的顺序实例化对象属性，以便共享隐藏类
-* 对象实例化之后，再向对象添加属性将强制执行隐藏类，并降低之前由隐藏类所优化的所有方法的执行速度，所以优先在构造函数内分配属性
-* 由于内联缓存的存在，重复执行相同方法的代码比仅执行一次的多个不同方法的代码效率更高
-* 避免使用键值不是自增的稀疏数组
-* 避免删除数组中的元素
-* 尽可能使用31位有符号数字
+- 始终以相同的顺序实例化对象属性，以便共享隐藏类
+- 对象实例化之后，再向对象添加属性将强制执行隐藏类，并降低之前由隐藏类所优化的所有方法的执行速度，所以优先在构造函数内分配属性
+- 由于内联缓存的存在，重复执行相同方法的代码比仅执行一次的多个不同方法的代码效率更高
+- 避免使用键值不是自增的稀疏数组
+- 避免删除数组中的元素
+- 尽可能使用 31 位有符号数字
 
 ### MVC
 
-* View传送指令到Controller
-* Controller完成业务逻辑后，要求Model改变状态
-* Model将新的数据发送到View，用户得到反馈
+- View 传送指令到 Controller
+- Controller 完成业务逻辑后，要求 Model 改变状态
+- Model 将新的数据发送到 View，用户得到反馈
 
 ### MVVM
 
-* 采用双向绑定，ViewModel连接View和Model
-* View的变动自动反映在ViewModel上
-* Model改变状态，通过ViewModel，自动更新View
+- 采用双向绑定，ViewModel 连接 View 和 Model
+- View 的变动自动反映在 ViewModel 上
+- Model 改变状态，通过 ViewModel，自动更新 View
 
 ### 参考资料
 
-* [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
-
+- [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)

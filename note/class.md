@@ -1,6 +1,6 @@
 ### [class](https://developer.mozilla.org/zh-CN/docs/web/javascript/reference/statements/class)
 
-class声明可以创建一个基于原型继承的新类
+class 声明可以创建一个基于原型继承的新类
 
 ```javascript
 class Cls {
@@ -15,10 +15,10 @@ class Cls {
   }
 }
 Cls.prototype.d = 4;
-Cls.prototype.fn2 = function() {
+Cls.prototype.fn2 = function () {
   console.log(this.b);
   console.log(this.d);
-}
+};
 const obj1 = new Cls(3);
 const obj2 = new Cls();
 obj1.fn1();
@@ -32,7 +32,7 @@ obj2.fn2();
 4
 ```
 
-通过extends实现继承
+通过 extends 实现继承
 
 ```javascript
 class Cls1 {
@@ -66,4 +66,3 @@ obj2.fn2();
 1
 2
 ```
-

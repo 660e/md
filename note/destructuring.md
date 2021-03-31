@@ -14,10 +14,7 @@ const obj = {
 const {
   a,
   b: x,
-  c: {
-    i,
-    j: y
-  }
+  c: { i, j: y }
 } = obj;
 console.log(a); // > 1
 console.log(x); // > 2
@@ -54,4 +51,3 @@ console.log(a); // > 1
 console.log(b); // > 2
 console.log(c); // > 6
 ```
-

@@ -110,4 +110,3 @@ console.log(Object.isExtensible(obj)); // > false
 console.log(Object.isSealed(obj)); // > true
 console.log(Object.isFrozen(obj)); // > true
 ```
-

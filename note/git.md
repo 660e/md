@@ -7,13 +7,13 @@ git config --global user.name "660e"
 git config --global user.email "solunar@vip.qq.com"
 ```
 
-生成ssh密钥
+生成 ssh 密钥
 
 ```shell
 ssh-keygen -t rsa -C "solunar@vip.qq.com"
 ```
 
-将生成的ssh密钥添加到github中，然后执行测试
+将生成的 ssh 密钥添加到 github 中，然后执行测试
 
 ```shell
 ssh -T git@github.com
@@ -126,4 +126,3 @@ git checkout readme.txt
 ```shell
 git remote prune origin
 ```
-
