@@ -29,13 +29,17 @@ function visibilityChange(func_hidden, func_visible) {
     hidden = 'webkitHidden';
     vc = 'webkitvisibilitychange';
   }
-  document.addEventListener(vc, () => {
-    document[hidden] ? func_hidden() : func_visible();
-  }, false);
+  document.addEventListener(
+    vc,
+    () => {
+      document[hidden] ? func_hidden() : func_visible();
+    },
+    false
+  );
 }
 ```
 
-### 获取url参数
+### 获取 url 参数
 
 ```javascript
 /**
@@ -57,7 +61,7 @@ function getUrlParams(url = '') {
 }
 ```
 
-### 获取cookie
+### 获取 cookie
 
 ```javascript
 /**
@@ -78,7 +82,7 @@ function getCookie(name) {
 }
 ```
 
-### 设置cookie
+### 设置 cookie
 
 ```javascript
 /**
@@ -96,7 +100,7 @@ function setCookie(name, value, expires) {
 }
 ```
 
-### 删除cookie
+### 删除 cookie
 
 ```javascript
 /**
@@ -175,3 +179,30 @@ function isWindow(source) {
 }
 ```
 
+### 树结构扁平化
+
+```javascript
+/**
+ * 树结构扁平化
+ *
+ * @param  {array}  data
+ * @param  {array}  keys
+ * @param  {number} level
+ * @return {array}
+ *
+ */
+function flattenTree(data, keys, level = 0) {
+  return data.reduce((accumulator, current) => {
+    return [
+      ...accumulator,
+      keys.reduce(
+        (acc, k) => {
+          return (acc[k] = current[k]), acc;
+        },
+        { level }
+      ),
+      ...flattenTree(current.children || [], keys, level + 1)
+    ];
+  }, []);
+}
+```
