@@ -28,7 +28,7 @@ localStorage.removeItem('key');
 localStorage.clear();
 ```
 
-### [缓存（caching）](https://developer.mozilla.org/zh-CN/docs/web/http/caching_faq)
+### [缓存（caching）](https://developer.mozilla.org/zh-CN/docs/web/http/caching)
 
 Cache-Control：缓存机制
 
