@@ -1,4 +1,4 @@
-### npm init
+### init
 
 创建并初始化 package.json
 
@@ -6,7 +6,7 @@
 npm init
 ```
 
-### npm install
+### install
 
 安装 package.json 中配置的依赖包
 
@@ -18,33 +18,33 @@ npm i
 安装指定依赖包，并写入 devDependencies 字段
 
 ```shell
-npm install webpack --save-dev
-npm i webpack -D
+npm install <name> --save-dev
+npm i <name> -D
 ```
 
 安装指定依赖包，并写入 dependencies 字段
 
 ```shell
-npm install jquery --save
-npm i jquery -S
+npm install <name> --save
+npm i <name> -S
 ```
 
 安装指定版本依赖包
 
 ```shell
-npm i @vue/cli@4.0.0
+npm i <name>@<version>
 ```
 
-### npm uninstall
+### uninstall
 
 卸载指定依赖包
 
 ```shell
-npm uninstall webpack
-npm r webpack
+npm uninstall <name>
+npm un <name>
 ```
 
-### npm ls
+### ls
 
 查看安装列表
 
@@ -55,32 +55,31 @@ npm ls --depth=0
 查看指定依赖包的版本信息
 
 ```shell
-npm ls webpack
+npm ls <name>
 ```
 
-### npm update
+### update
 
 更新指定依赖包
 
 ```shell
-npm update @vue/cli
-npm up @vue/cli
+npm update <name>
+npm up <name>
 ```
 
-### npm audit
+### publish
 
-扫描漏洞
+发布
 
 ```shell
-npm audit
+npm publish
+npm publish --access=public
 ```
 
-扫描漏洞，并修复
+### unpublish
+
+撤销
 
 ```shell
-npm audit fix
+npm unpublish <package-spec>
 ```
-
-### 参考资料
-
-- [https://docs.npmjs.com/cli/v6/commands](https://docs.npmjs.com/cli/v6/commands)

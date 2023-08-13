@@ -23,15 +23,6 @@ function function_name(argument) {
 }
 ```
 
-### commit 规范
-
-- feat/feature：增加新功能
-- fix：修复 bug
-- docs：编写文档、编写注释
-- style：变更代码格式（不影响代码运行逻辑）
-- refactor：重构
-- chore：变更构建过程或构建工具
-
 ### 闭包（closure）
 
 能够从函数外部读取该函数内部变量的结构称为闭包
@@ -142,12 +133,6 @@ function fn(a, b, c) {
 fn(1, 2, 3);
 ```
 
-### js 编译过程
-
-- 分词（tokenizing）
-- 解析（parsing） -> 抽象语法树（abstract syntax tree）
-- 生成原始代码（raw code）
-
 ### 优化 js
 
 - 始终以相同的顺序实例化对象属性，以便共享隐藏类
@@ -156,18 +141,6 @@ fn(1, 2, 3);
 - 避免使用键值不是自增的稀疏数组
 - 避免删除数组中的元素
 - 尽可能使用 31 位有符号数字
-
-### MVC
-
-- View 传送指令到 Controller
-- Controller 完成业务逻辑后，要求 Model 改变状态
-- Model 将新的数据发送到 View，用户得到反馈
-
-### MVVM
-
-- 采用双向绑定，ViewModel 连接 View 和 Model
-- View 的变动自动反映在 ViewModel 上
-- Model 改变状态，通过 ViewModel，自动更新 View
 
 ### 参考资料
 

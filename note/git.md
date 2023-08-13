@@ -67,6 +67,13 @@ git add .
 
 为缓存区的文件添加注释
 
+- feat/feature：新功能
+- fix：修复 bug
+- docs：编写文档、编写注释
+- style：变更代码格式（不影响代码运行逻辑）
+- refactor：重构
+- chore：变更构建过程或构建工具
+
 ```shell
 git commit -m "update"
 ```

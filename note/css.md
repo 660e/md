@@ -113,15 +113,6 @@ GFC（grid formatting context）
 }
 ```
 
-### 输入网址 -> 页面呈现
-
-- url -> dns -> ip -> server
-- http
-- html -> byte -> character -> token -> node -> dom tree
-- css -> render tree
-- layout -> paint -> composite
-- display
-
 ### 参考资料
 
 - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
