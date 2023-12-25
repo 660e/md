@@ -181,6 +181,10 @@ function isWindow(source) {
 function isBlob(source) {
   return toString.call(source) === '[object Blob]';
 }
+
+function isBoolean(source) {
+  return toString.call(source) === '[object Boolean]';
+}
 ```
 
 ### 树结构扁平化
