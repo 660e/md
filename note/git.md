@@ -72,7 +72,7 @@ git add .
 - docs：编写文档、编写注释
 - style：变更代码格式（不影响代码运行逻辑）
 - refactor：重构
-- chore：变更构建过程或构建工具
+- chore：杂务（不属于以上类型的其他变动）
 
 ```shell
 git commit -m "update"
