@@ -1,4 +1,4 @@
-## Git
+### Git
 
 ```shell
 git config --global user.name "Min"
@@ -8,7 +8,7 @@ git config --global user.name "Min"
 git config --global user.email "solunar@vip.qq.com"
 ```
 
-## SSH
+### SSH
 
 ```shell
 ssh-keygen -t rsa -C "solunar@vip.qq.com"
