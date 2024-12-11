@@ -39,3 +39,25 @@ const bar: GetOptional<IFoo> = {};
 
 console.log(bar);
 ```
+
+### Union Type
+
+```typescript
+type TFoo = { a: number; b: number } | { b: number; c: number };
+
+const foo: TFoo = { a: 1, b: 1, c: 1 };
+
+console.log(foo.b);
+```
+
+### Intersection Type
+
+```typescript
+type TFoo = { a: number; b: number } & { b: number; c: number };
+
+const foo: TFoo = { a: 1, b: 1, c: 1 };
+
+console.log(foo.a);
+console.log(foo.b);
+console.log(foo.c);
+```
