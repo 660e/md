@@ -1,8 +1,8 @@
 ### Generics
 
 ```typescript
-function foo<T>(arg: T): T {
-  return arg;
+function foo<T>(bar: T): T {
+  return bar;
 }
 
 foo<number>(1);
@@ -33,11 +33,11 @@ interface IFoo {
 
 type TBar = Optional<IFoo, "d" | "e">;
 
-function fn(options: TBar) {
-  console.log(options);
+function foo(bar: TBar) {
+  console.log(bar);
 }
 
-fn({ a: "", b: 0, c: false });
+foo({ a: "", b: 0, c: false });
 ```
 
 ### GetOptional
@@ -55,9 +55,9 @@ interface IFoo {
   e?: undefined;
 }
 
-const bar: GetOptional<IFoo> = {};
+const foo: GetOptional<IFoo> = {};
 
-console.log(bar);
+console.log(foo);
 ```
 
 ### Union Type
