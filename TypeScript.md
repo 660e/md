@@ -1,3 +1,23 @@
+### Generics
+
+```typescript
+function foo<T>(arg: T): T {
+  return arg;
+}
+
+foo<number>(1);
+foo(1);
+```
+
+```typescript
+interface IFoo<T> {
+  a: T;
+}
+
+const foo: IFoo<number> = { a: 1 };
+console.log(foo.a);
+```
+
 ### Optional
 
 ```typescript
