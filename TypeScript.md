@@ -19,3 +19,23 @@ function fn(options: TBar) {
 
 fn({ a: "", b: 0, c: false });
 ```
+
+### GetOptional
+
+```typescript
+type GetOptional<T> = {
+  [K in keyof T as T[K] extends Required<T>[K] ? never : K]: T[K];
+};
+
+interface IFoo {
+  a: string;
+  b: number;
+  c?: boolean;
+  d?: null;
+  e?: undefined;
+}
+
+const bar: GetOptional<IFoo> = {};
+
+console.log(bar);
+```
