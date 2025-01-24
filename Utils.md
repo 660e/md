@@ -1,17 +1,17 @@
 ### 660e
 
-```javascript
+```typescript
 export function test() {
-  return "明".charCodeAt().toString(16);
+  return "明".charCodeAt(0).toString(16);
 }
 ```
 
 ### flattenTree
 
-```javascript
-export function flattenTree(data, children = "children") {
-  return data.reduce((accumulator, currentValue) => {
-    return [...accumulator, currentValue, ...flattenTree(currentValue[children] || [])];
+```typescript
+export function flattenTree<T>(data: T[], children = "children"): T[] {
+  return data.reduce((accumulator: T[], currentValue: T) => {
+    return [...accumulator, currentValue, ...flattenTree((currentValue[children as keyof T] as T[]) || [])];
   }, []);
 }
 ```
