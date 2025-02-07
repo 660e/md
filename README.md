@@ -35,3 +35,24 @@ function fn(a, b, c) {
   console.log(true);
 }
 ```
+
+### DTO（Data Transfer Object）
+
+```typescript
+interface CreateUserDTO {
+  id: string;
+  username: string;
+  email: string;
+  password: string;
+}
+```
+
+### VO（Value Object）
+
+```typescript
+interface UserVO {
+  username: string;
+  email: string;
+  password: string;
+}
+```
