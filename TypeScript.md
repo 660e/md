@@ -1,23 +1,3 @@
-### Generics
-
-```typescript
-function foo<T>(bar: T): T {
-  return bar;
-}
-
-foo<number>(1);
-foo(1);
-```
-
-```typescript
-interface IFoo<T> {
-  a: T;
-}
-
-const foo: IFoo<number> = { a: 1 };
-console.log(foo.a);
-```
-
 ### Optional
 
 ```typescript
@@ -58,6 +38,26 @@ interface IFoo {
 const foo: GetOptional<IFoo> = {};
 
 console.log(foo);
+```
+
+### Generics
+
+```typescript
+function foo<T>(bar: T): T {
+  return bar;
+}
+
+foo<number>(1);
+foo(1);
+```
+
+```typescript
+interface IFoo<T> {
+  a: T;
+}
+
+const foo: IFoo<number> = { a: 1 };
+console.log(foo.a);
 ```
 
 ### Union Type
